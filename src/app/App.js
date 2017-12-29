@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.svg';
 import '../css/App.css';
+
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 }
@@ -9,16 +10,28 @@ const user = {
   lastName: 'Aranibar'
 };
 
+
+const introText = React.createElement(
+  'p',
+  {className: 'App-intro'},
+  'To get started :'
+);
+
+
 class App extends Component {
   render() {
+    function welcomeMsg(){
+      return "Welcome to React=> ";
+    }
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React=> , {formatName(user)}</h1>
+          <h1 className="App-title">{welcomeMsg()} {formatName(user)}</h1>
         </header>
+        {introText} 
         <p className="App-intro">
-          To get started <code>src/App.js</code> and save to reload.
+           Edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
     );
