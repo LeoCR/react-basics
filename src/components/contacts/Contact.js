@@ -6,8 +6,8 @@ class Contact extends React.Component{
     constructor(props){
         super(props);
         this.name=props.name;
-        this.email=props.name;
-        this.tel=props.name;
+        this.email=props.email;
+        this.tel=props.tel;
     }
     render(){
             return(
