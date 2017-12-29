@@ -9,6 +9,14 @@ const user = {
   lastName: 'Aranibar'
 };
 
+
+const introText = React.createElement(
+  'p',
+  {className: 'App-intro'},
+  'To get started :'
+);
+
+
 class App extends Component {
   render() {
     return (
@@ -17,8 +25,10 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React=> , {formatName(user)}</h1>
         </header>
+        
+        {introText} 
         <p className="App-intro">
-          To get started <code>src/App.js</code> and save to reload.
+           Edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
     );
