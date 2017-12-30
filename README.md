@@ -1,2 +1,4 @@
 # react-from-zero
-Learning react simple step by step with the default documentation
+The easiest way to get started with React is using the original documentation from the official web site
+#### Introducing JSX
+More info: [ Reactjs.org ](https://reactjs.org/docs/)
