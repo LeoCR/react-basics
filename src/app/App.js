@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../images/logo.svg';
 import '../css/App.css';
 import getReactContact from '../components/contacts/Contact';
+import getComments from '../components/comments/Comments';
 
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
@@ -38,5 +39,6 @@ class App extends Component {
     );
   }
 }
+getComments();
 getReactContact();
 export default App;
