@@ -1,25 +1,40 @@
 # react-from-zero
 Learning react simple step by step with the default documentation.
 ### Adding Lifecycle Methods to a Class
-The componentDidMount() hook runs after the component output has been rendered to the DOM. This is called “mounting” in React.
+When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. For example, this Toggle component renders a button that lets the user toggle between “ON” and “OFF” states:
 ```JavaScript
 
-componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
     );
   }
+}
+
+ReactDOM.render(
+  <Toggle />,
+  document.getElementById('root')
+);
+
 
 ```
+You have to be careful about the meaning of this in JSX callbacks. In JavaScript, class methods are not bound by default. If you forget to bind this.handleClick and pass it to onClick, this will be undefined when the function is actually called.
 
-The componentWillUnmount() hook runs when some component in the DOM was removed. This is called “unmounting” in React.
-```JavaScript
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-```
-
-More info: [State and Lifecycle - Reactjs.org ](https://reactjs.org/docs/state-and-lifecycle.html)
+More info: [Handling Events - Reactjs.org ](https://reactjs.org/docs/handling-events.html)

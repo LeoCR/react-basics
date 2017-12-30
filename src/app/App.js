@@ -3,6 +3,7 @@ import logo from '../images/logo.svg';
 import '../css/App.css';
 import getReactContact from '../components/contacts/Contact';
 
+import '../css/index.css';
 const user = {
   firstName: 'Leonardo',
   lastName: 'Aranibar'

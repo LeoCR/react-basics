@@ -19,3 +19,28 @@ td, th {
 tr:nth-child(even) {
   background-color: #c2dff4;
 }
+.btn{
+  padding: 10px;
+  font-size: 15px;
+  border: 0px;
+  background: #7cc7fc;
+  color: black;
+  border-radius: 6px;
+  width: 50px;
+  box-shadow: 2px 4px;
+  transition: all ease-in-out 0.3s;
+  opacity: 0.8;
+}
+.hovered{
+  opacity: 1;
+  box-shadow: 0px 1px;
+  transition: all ease-in-out 0.2s;
+  background: #fce07c;
+  transform: scale(1.2,1.2);
+}
+.mouse_out{
+  box-shadow: 2px 4px;
+  transition: all ease-in-out 0.2s;
+  background: #fca07c;
+  transform: scale(1,1)
+}
