@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './app/App';
-import ClockTime from './components/Clock';
+import ClockTime from './components/clock/Clock';
 import registerServiceWorker from './config/registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
